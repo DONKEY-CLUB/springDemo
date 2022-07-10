@@ -17,7 +17,7 @@ jobs:
       - run: chmod 600 "$HOME/.ssh/key"
       # Build
       - run: npm ci
-      - #run: mvn spring-boot:run
+      #- run: mvn spring-boot:run
       - run: mvn spring-boot:run
       # Deploy
       - run: rsync -e "ssh -p 20022 -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete .root@185.105.224.63:/home/boss/webapps/labspace
