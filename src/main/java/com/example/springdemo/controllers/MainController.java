@@ -18,4 +18,9 @@ public class MainController {
         return "minor";
     }
 
+    @GetMapping("/profiles.html")
+    public String home3( Model model) {
+        model.addAttribute("title", "Главная страница");
+        return "profiles";
+    }
 }
