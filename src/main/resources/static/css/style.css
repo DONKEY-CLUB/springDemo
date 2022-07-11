@@ -1622,7 +1622,7 @@ div.dt-button-info {
 }
 /* CIRCLE */
 .img-circle {
-  border-radius: 60%;
+  border-radius: 50%;
 }
 .btn-circle {
   width: 30px;
