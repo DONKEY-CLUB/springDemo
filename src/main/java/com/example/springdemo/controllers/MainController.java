@@ -7,10 +7,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class MainController {
 
-    @GetMapping("/")
+    @GetMapping("/index.html")
     public String home( Model model) {
         model.addAttribute("title", "Главная страница");
         return "index";
+    }
+    @GetMapping("/minor.html")
+    public String home2( Model model) {
+        model.addAttribute("title", "Главная страница");
+        return "minor";
     }
 
     //ADD STYLES
