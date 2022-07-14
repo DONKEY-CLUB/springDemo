@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 
 <head>
 
@@ -11,6 +11,16 @@
 
   <link th:href="@{/css/animate.css}" rel="stylesheet">
   <link th:href="@{/css/style.css}" rel="stylesheet">
+
+  <!-- Mainly scripts -->
+  <script th:src="@{/js/jquery-2.1.1.js}"></script>
+  <script th:src="@{/js/bootstrap.min.js}"></script>
+  <script th:src="@{/js/plugins/metisMenu/jquery.metisMenu.js}"></script>
+  <script th:src="@{/js/plugins/slimscroll/jquery.slimscroll.min.js}"></script>
+
+  <!-- Custom and plugin javascript -->
+  <script th:src="@{/js/inspinia.js}"></script>
+  <script th:src="@{/js/plugins/pace/pace.min.js}"></script>
 
 </head>
 
@@ -66,30 +76,15 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="text-center m-t-lg">
-            <h1>
-              It's the minor page of our project
-            </h1>
-            <small>
-              It's test page right now
-            </small>
+            <div>
+              <p>Your IP address is: <span th:text="${clientIPAddress}"></span></p>
+              <p>Current date: <span th:text="${clientDate}"></span></p>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-<!-- Mainly scripts -->
-<script th:src="@{/js/jquery-2.1.1.js}"></script>
-<script th:src="@{/js/bootstrap.min.js}"></script>
-<script th:src="@{/js/plugins/metisMenu/jquery.metisMenu.js}"></script>
-<script th:src="@{/js/plugins/slimscroll/jquery.slimscroll.min.js}"></script>
-
-<!-- Custom and plugin javascript -->
-<script th:src="@{/js/inspinia.js}"></script>
-<script th:src="@{/js/plugins/pace/pace.min.js}"></script>
-
-
 </body>
-
 </html>
