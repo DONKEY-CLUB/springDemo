@@ -5,6 +5,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import java.net.InetAddress;
+import java.net.Socket;
 import java.util.Date;
 
 
@@ -15,7 +16,8 @@ public class MainController {
     public String index(Model model) {
         Date date = new Date(System.currentTimeMillis());
         try {
-            InetAddress clientIPAddress = InetAddress.getLocalHost();
+            Socket skt=new Socket("google.com",80);
+            InetAddress clientIPAddress = skt.getLocalAddress();
             model.addAttribute("clientIPAddress", clientIPAddress.getHostAddress());
             model.addAttribute("clientDate", date);
         } catch (Exception ex) {
@@ -28,7 +30,8 @@ public class MainController {
     public String home2(Model model) {
         Date date = new Date(System.currentTimeMillis());
         try {
-            InetAddress clientIPAddress = InetAddress.getLocalHost();
+            Socket skt=new Socket("google.com",80);
+            InetAddress clientIPAddress = skt.getLocalAddress();
             model.addAttribute("clientIPAddress", clientIPAddress.getHostAddress());
             model.addAttribute("clientDate", date);
         } catch (Exception ex) {
@@ -41,7 +44,8 @@ public class MainController {
     public String profile(Model model) {
         Date date = new Date(System.currentTimeMillis());
         try {
-            InetAddress clientIPAddress = InetAddress.getLocalHost();
+            Socket skt=new Socket("google.com",80);
+            InetAddress clientIPAddress = skt.getLocalAddress();
             model.addAttribute("clientIPAddress", clientIPAddress.getHostAddress());
             model.addAttribute("clientDate", date);
         } catch (Exception ex) {
